@@ -1,0 +1,15 @@
+LR_IROM1 0x00000000    (1024 * 1024) {    ; load region size_region
+	INTVEC_REGION 0x00000000 FIXED 0x1FFC 
+	{
+       *.o (RESET, +First)
+   }
+    ER_IROM1 0x00002000 ((1024 - 8) * 1024) {
+        .ANY (+RO)
+        .ANY (+XO)
+    }
+}
+
+
+
+
+ 
